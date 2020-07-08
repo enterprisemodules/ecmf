@@ -1,0 +1,4 @@
+---
+ecmf::base::generic::monitoring:   skip
+ecmf::base::generic::backup:       skip
+ecmf::base::generic::patching:     skip
