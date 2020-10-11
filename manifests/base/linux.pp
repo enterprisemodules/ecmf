@@ -17,8 +17,8 @@ class ecmf::base::linux(
 ) {
   echo {"Apply ${name}": withpath => false,}
   easy_type::ordered_steps([
-    'ecmf::base::linux::sysctl',
-    'ecmf::base::linux::limits',
-    'ecmf::base::linux::packages',
+    ['ecmf::base::linux::sysctl', { 'implementation' => 'easy_type::profile::sysctl' }],
+    ['ecmf::base::linux::limits', { 'implementation' => 'easy_type::profile::limits' }],
+    ['ecmf::base::linux::packages',{ 'implementation' => 'easy_type::profile::packages' }],
   ])
 }
