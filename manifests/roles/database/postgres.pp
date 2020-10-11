@@ -13,7 +13,7 @@ class ecmf::roles::database::postgres(
   Optional[String[1]] $after_postgres = undef,
 ) {
   echo {"Apply ${name}": withpath => false,}
-  easy_type::staged_contain([
+  easy_type::ordered_steps([
     'ecmf::base',
     'ecmf::profile::database::postgres'
   ])

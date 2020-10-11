@@ -13,7 +13,7 @@ class ecmf::roles::monitoring::zabbix_server(
   Optional[String[1]] $after_zabbix = undef,
 ) {
   echo {"Apply ${name}": withpath => false,}
-  easy_type::staged_contain([
+  easy_type::ordered_steps([
     'ecmf::base',
     'ecmf::profile::monitoring::zabbix'
   ])

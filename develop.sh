@@ -11,4 +11,6 @@ docker exec ecmf rpm -Uvh https://yum.puppet.com/puppet-tools-release-el-7.noarc
 docker exec ecmf yum install puppet-agent puppet-bolt -y
 docker exec ecmf cp /software/Universal.entitlements /etc/puppetlabs/puppet/
 docker exec ecmf /opt/puppetlabs/puppet/bin/gem install byebug pry --no-ri --no-rdoc
+docker exec ecmf puppet module install puppetlabs-stdlib --force
+docker exec ecmf puppet module install ipcrm-echo --force
 docker exec -it ecmf bash

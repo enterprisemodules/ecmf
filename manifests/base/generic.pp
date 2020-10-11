@@ -16,7 +16,7 @@ class ecmf::base::generic(
   Optional[String[1]] $after_patching = undef,
 ) {
   echo {"Apply ${name}": withpath => false,}
-  easy_type::staged_contain([
+  easy_type::ordered_steps([
     'ecmf::base::client::monitoring',
     'ecmf::base::client::backup',
     'ecmf::base::client::patching',
