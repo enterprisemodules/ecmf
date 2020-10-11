@@ -16,7 +16,7 @@ class ecmf::base::linux(
   Optional[String[1]] $after_packages = undef,
 ) {
   echo {"Apply ${name}": withpath => false,}
-  easy_type::staged_contain([
+  easy_type::ordered_steps([
     'ecmf::base::linux::sysctl',
     'ecmf::base::linux::limits',
     'ecmf::base::linux::packages',

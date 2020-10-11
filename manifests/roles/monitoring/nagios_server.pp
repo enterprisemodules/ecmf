@@ -13,7 +13,7 @@ class ecmf::roles::monitoring::nagios_server(
   Optional[String[1]] $after_nagios = undef,
 ) {
   echo {"Apply ${name}": withpath => false,}
-  easy_type::staged_contain([
+  easy_type::ordered_steps([
     'ecmf::base',
     'ecmf::profile::monitoring::nagios'
   ])
