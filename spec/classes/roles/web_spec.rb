@@ -7,7 +7,7 @@ describe 'ecmf::roles::web' do
     context "on #{os}" do
       let(:facts) { os_facts }
 
-      it { is_expected.to compile.and_raise_error(%r{Specify an implementation in your hiera data with key: 'ecmf::roles::web'}) }
+      it { is_expected.to compile.and_raise_error(%r{Specify an implementation in your hiera data with key: 'ecmf::roles::web::implementation'}) }
     end
   end
 end

@@ -7,7 +7,7 @@ describe 'ecmf::roles::monitoring' do
     context "on #{os}" do
       let(:facts) { os_facts }
 
-      it { is_expected.to compile.and_raise_error(%r{Specify an implementation in your hiera data with key: 'ecmf::roles::monitoring'}) }
+      it { is_expected.to compile.and_raise_error(%r{Specify an implementation in your hiera data with key: 'ecmf::roles::monitoring::implementation'}) }
     end
   end
 end
