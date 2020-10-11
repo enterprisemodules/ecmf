@@ -2,3 +2,7 @@
 ecmf::base::generic::monitoring:   skip
 ecmf::base::generic::backup:       skip
 ecmf::base::generic::patching:     skip
+
+ecmf::base::linux::sysctl::list:    {}  # For now
+ecmf::base::linux::limits::list:    {}  # For now
+ecmf::base::linux::packages::list:  {}  # For now
