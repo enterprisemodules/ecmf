@@ -17,8 +17,8 @@ class ecmf::base::generic(
 ) {
   echo {"Apply ${name}": withpath => false,}
   easy_type::ordered_steps([
-    'ecmf::base::client::monitoring',
-    'ecmf::base::client::backup',
-    'ecmf::base::client::patching',
+    'ecmf::base::agent::monitoring',
+    'ecmf::base::agent::backup',
+    'ecmf::base::agent::patching',
   ])
 }

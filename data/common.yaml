@@ -8,14 +8,18 @@ lookup_options:
   '^ecmf::.*::.*_password':
     convert_to: 'Sensitive'
 
-ecmf::base::generic::monitoring:   skip
-ecmf::base::generic::backup:       skip
-ecmf::base::generic::patching:     skip
-
 ecmf::base::linux::sysctl::list:    {}  # For now
 ecmf::base::linux::limits::list:    {}  # For now
 ecmf::base::linux::packages::list:  {}  # For now
-
+#
+# Configure the zabbix agent
+#
+ecmf::base::agent::monitoring::zabbix::server:  ~
+#
+# Configue the check_mk agent
+#
+ecmf::base::agent::monitoring::check_mk::filestore: https://mathias-kettner.de/support/1.5.0p19/
+ecmf::base::agent::monitoring::check_mk::package:   check-mk-raw-1.5.0p19-el7-38.x86_64.rpm
 #
 # Data for the postgres role
 #

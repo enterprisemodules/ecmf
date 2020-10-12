@@ -4,6 +4,6 @@
 #
 # @example
 #   include ecmf::base::client::patching
-class ecmf::base::client::patching {
-  fail "Specify an implementation in your hiera data with key: 'ecmf::base::client::patching'"
+class ecmf::base::agent::patching {
+  warning "Specify an implementation in your hiera data with key: 'ecmf::base::generic::patching'"
 }
