@@ -17,6 +17,27 @@
     {
       "name": "ipcrm-echo",
       "version_requirement": ">= 0.1.6 < 1.0.0"
+    },
+    {
+      "name" : "herculesteam-augeasproviders_core"
+    },
+    {
+      "name" : "herculesteam-augeasproviders_sysctl"
+    },
+    {
+      "name" : "saz-limits"
+    },
+    {
+      "name" : "puppetlabs-firewall"
+    },
+    {
+      "name" : "puppet-firewalld"
+    },
+    {
+      "name" : "puppetlabs-concat"
+    },
+    {
+      "name" : "puppetlabs-postgresql"
     }
   ],
   "operatingsystem_support": [
@@ -36,24 +57,6 @@
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
         "8"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
-      "operatingsystemrelease": [
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "9"
-      ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "18.04"
       ]
     },
     {
