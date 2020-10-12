@@ -3,7 +3,12 @@
 # A description of what this class does
 #
 # @example
-#   include ecmf::base::client::monitoring::nagios
-class ecmf::base::client::monitoring::nagios {
+#   include ecmf::base::agent::backup::veeam
+class ecmf::base::agent::backup::veeam(
+) {
   echo {"Apply ${name}": withpath => false,}
+
+  easy_type::debug_evaluation()
+
+  class { 'veeamagent': }
 }
