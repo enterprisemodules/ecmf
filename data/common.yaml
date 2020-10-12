@@ -1,4 +1,13 @@
 ---
+# ------------------------------------------------------------------------------
+#
+# Conversions
+#
+# ------------------------------------------------------------------------------
+lookup_options:
+  '^ecmf::.*::.*_password':
+    convert_to: 'Sensitive'
+
 ecmf::base::generic::monitoring:   skip
 ecmf::base::generic::backup:       skip
 ecmf::base::generic::patching:     skip
@@ -6,3 +15,16 @@ ecmf::base::generic::patching:     skip
 ecmf::base::linux::sysctl::list:    {}  # For now
 ecmf::base::linux::limits::list:    {}  # For now
 ecmf::base::linux::packages::list:  {}  # For now
+
+#
+# Data for the postgres role
+#
+ecmf::profile::database::postgres::sysctl::list:                {}
+ecmf::profile::database::postgres::limits::list:                {}
+ecmf::profile::database::postgres::packages::list:              {}
+ecmf::profile::database::postgres::firewall::ports:             {}
+ecmf::profile::database::postgres::firewall::manage_service:    true
+ecmf::profile::database::postgres::databases::list:             {}
+ecmf::profile::database::postgres::roles::list:                 {}
+ecmf::profile::database::postgres::grants::list:                {}
+...
