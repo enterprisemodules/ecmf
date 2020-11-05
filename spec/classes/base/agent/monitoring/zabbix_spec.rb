@@ -2,12 +2,12 @@
 
 require 'spec_helper'
 
-describe 'ecmf::base::client::monitoring::zabbix' do
+describe 'ecmf::base::agent::monitoring::zabbix' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
 
-      it { is_expected.to compile }
+      it { is_expected.to compile.with_all_deps }
     end
   end
 end
