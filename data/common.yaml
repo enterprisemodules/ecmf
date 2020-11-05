@@ -1,0 +1,49 @@
+---
+# ------------------------------------------------------------------------------
+#
+# Conversions
+#
+# ------------------------------------------------------------------------------
+lookup_options:
+  '^ecmf::.*::.*_password':
+    convert_to: 'Sensitive'
+
+ecmf::base::linux::sysctl::list:    {}  # For now
+ecmf::base::linux::limits::list:    {}  # For now
+ecmf::base::linux::packages::list:  {}  # For now
+#
+# Configure the zabbix agent
+#
+ecmf::base::agent::monitoring::zabbix::server:  ~
+#
+# Configue the check_mk agent
+#
+ecmf::base::agent::monitoring::check_mk::filestore: https://mathias-kettner.de/support/1.5.0p19/
+ecmf::base::agent::monitoring::check_mk::package:   check-mk-raw-1.5.0p19-el7-38.x86_64.rpm
+#
+# Configure the zabbix agent
+#
+ecmf::base::agent::monitoring::zabbix::server:  ~
+#
+# Configue the check_mk agent
+#
+ecmf::base::agent::monitoring::check_mk::filestore: https://mathias-kettner.de/support/1.5.0p19/
+ecmf::base::agent::monitoring::check_mk::package:   check-mk-raw-1.5.0p19-el7-38.x86_64.rpm
+#
+# Data for the postgres role
+#
+ecmf::profile::database::postgres::firewall::manage_service:  true
+ecmf::profile::database::postgres::firewall::firewalld::ports:
+  '300 Allow Postgress on port 1521':
+    port: 5432
+ecmf::profile::database::postgres::firewall::iptables::ports:
+  '300 Allow Postgress on port 1521':
+    dport: 5432
+ecmf::profile::database::postgres::sysctl::list:                {}
+ecmf::profile::database::postgres::limits::list:                {}
+ecmf::profile::database::postgres::packages::list:              {}
+ecmf::profile::database::postgres::firewall::ports:             {}
+ecmf::profile::database::postgres::databases::list:             {}
+ecmf::profile::database::postgres::roles::list:                 {}
+ecmf::profile::database::postgres::grants::list:                {}
+...

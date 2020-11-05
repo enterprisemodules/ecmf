@@ -1,0 +1,102 @@
+# Include the defaults module jobs for gitlab CI definitions
+#
+include:
+  - project: 'enterprisemodules/gitlab_ci'
+    file: 'module-defaults.yml'
+
+postgres database role:
+  extends: .puppet_acceptance_test
+  variables:
+    type: database/postgres_database
+  only:
+    changes:
+      - "manifests/roles/database.pp"
+      - "manifests/profile/database/postgres.pp"
+      - "manifests/profile/database/postgres/*.pp"
+      - "specs/acceptance/database/postgres_database_spec.rb"
+      - "specs/support/acceptance/*.rb"
+      - "manifests/base.pp"
+      - "manifests/base/**/*.pp"
+      - "lib/puppet/**/*.rb"
+      - "templates/**/*.*"
+
+mysql database role:
+  extends: .puppet_acceptance_test
+  variables:
+    type: database/mysql_database
+  only:
+    changes:
+      - "manifests/roles/database.pp"
+      - "manifests/profile/database/mysql.pp"
+      - "manifests/profile/database/mysql/*.pp"
+      - "specs/acceptance/database/mysql_database_spec.rb"
+      - "specs/support/acceptance/*.rb"
+      - "manifests/base.pp"
+      - "manifests/base/**/*.pp"
+      - "lib/puppet/**/*.rb"
+      - "templates/**/*.*"
+
+# ldap identity role:
+#   extends: .puppet_acceptance_test
+#   variables:
+#     type: identity/ldap_identity
+#   only:
+#     changes:
+#       - "manifests/roles/identity.pp"
+#       - "manifests/profile/identity/ldap.pp"
+#       - "manifests/profile/identity/ldap/*.pp"
+#       - "specs/acceptance/identity/ldap_identity_spec.rb"
+#       - "specs/support/acceptance/*.rb"
+#       - "manifests/base.pp"
+#       - "manifests/base/**/*.pp"
+#       - "lib/puppet/**/*.rb"
+#       - "templates/**/*.*"
+
+zabbix monitoring role:
+  extends: .puppet_acceptance_test
+  variables:
+    type: monitoring/zabbix_monitoring
+  only:
+    changes:
+      - "manifests/roles/monitoring.pp"
+      - "manifests/profile/monitoring/zabbix.pp"
+      - "manifests/profile/monitoring/zabbix/*.pp"
+      - "specs/acceptance/monitoring/zabbix_monitoring_spec.rb"
+      - "specs/support/acceptance/*.rb"
+      - "manifests/base.pp"
+      - "manifests/base/**/*.pp"
+      - "lib/puppet/**/*.rb"
+      - "templates/**/*.*"
+
+nagios monitoring role:
+  extends: .puppet_acceptance_test
+  variables:
+    type: monitoring/nagios_monitoring
+  only:
+    changes:
+      - "manifests/roles/monitoring.pp"
+      - "manifests/profile/monitoring/nagios.pp"
+      - "manifests/profile/monitoring/nagios/*.pp"
+      - "specs/acceptance/monitoring/nagios_monitoring_spec.rb"
+      - "specs/support/acceptance/*.rb"
+      - "manifests/base.pp"
+      - "manifests/base/**/*.pp"
+      - "lib/puppet/**/*.rb"
+      - "templates/**/*.*"
+
+apache web role:
+  extends: .puppet_acceptance_test
+  variables:
+    type: web/apache_web
+  only:
+    changes:
+      - "manifests/roles/web.pp"
+      - "manifests/profile/web/apache.pp"
+      - "manifests/profile/web/apache/*.pp"
+      - "specs/acceptance/web/apache_web_spec.rb"
+      - "specs/support/acceptance/*.rb"
+      - "manifests/base.pp"
+      - "manifests/base/**/*.pp"
+      - "lib/puppet/**/*.rb"
+      - "templates/**/*.*"
+      

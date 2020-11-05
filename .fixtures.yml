@@ -1,0 +1,32 @@
+# This file can be used to install module depdencies for unit testing
+# See https://github.com/puppetlabs/puppetlabs_spec_helper#using-fixtures for details
+---
+fixtures:
+  repositories:
+    facts:        'git://github.com/puppetlabs/puppetlabs-facts.git'
+    puppet_agent: 'git://github.com/puppetlabs/puppetlabs-puppet_agent.git'
+    provision:    'git://github.com/enterprisemodules/provision.git'
+  forge_modules:
+    easy_type:              enterprisemodules-easy_type
+    stdlib:                 puppetlabs/stdlib
+    echo:                   ipcrm/echo
+    augeas_core:            puppetlabs-augeas_core
+    augeasproviders_core:   herculesteam-augeasproviders_core
+    augeasproviders_sysctl: herculesteam-augeasproviders_sysctl
+    limits:                 saz/limits
+    firewall:               puppetlabs-firewall
+    firewalld:              puppet-firewalld
+    concat:                 puppetlabs-concat
+    postgresql:             puppetlabs-postgresql
+    check_mk:               puppet-check_mk
+    ora_profile:            enterprisemodules-ora_profile
+    ora_install:            enterprisemodules-ora_install
+    ora_config:             enterprisemodules-ora_config
+    ora_cis:                enterprisemodules-ora_cis
+    wls_profile:            enterprisemodules-wls_profile
+    wls_install:            enterprisemodules-wls_install
+    wls_config:             enterprisemodules-wls_config
+    ibm_profile:            enterprisemodules-ibm_profile
+    mq_install:             enterprisemodules-mq_install
+    mq_config:              enterprisemodules-mq_config
+    
