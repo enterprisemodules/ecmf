@@ -21,6 +21,15 @@ ecmf::base::agent::monitoring::zabbix::server:  ~
 ecmf::base::agent::monitoring::check_mk::filestore: https://mathias-kettner.de/support/1.5.0p19/
 ecmf::base::agent::monitoring::check_mk::package:   check-mk-raw-1.5.0p19-el7-38.x86_64.rpm
 #
+# Configure the zabbix agent
+#
+ecmf::base::agent::monitoring::zabbix::server:  ~
+#
+# Configue the check_mk agent
+#
+ecmf::base::agent::monitoring::check_mk::filestore: https://mathias-kettner.de/support/1.5.0p19/
+ecmf::base::agent::monitoring::check_mk::package:   check-mk-raw-1.5.0p19-el7-38.x86_64.rpm
+#
 # Data for the postgres role
 #
 ecmf::profile::database::postgres::sysctl::list:                {}

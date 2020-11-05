@@ -18,4 +18,15 @@ fixtures:
     firewalld:              puppet-firewalld
     concat:                 puppetlabs-concat
     postgresql:             puppetlabs-postgresql
+    check_mk:               puppet-check_mk
+    ora_profile:            enterprisemodules-ora_profile
+    ora_install:            enterprisemodules-ora_install
+    ora_config:             enterprisemodules-ora_config
+    ora_cis:                enterprisemodules-ora_cis
+    wls_profile:            enterprisemodules-wls_profile
+    wls_install:            enterprisemodules-wls_install
+    wls_config:             enterprisemodules-wls_config
+    ibm_profile:            enterprisemodules-ibm_profile
+    mq_install:             enterprisemodules-mq_install
+    mq_config:              enterprisemodules-mq_config
     
