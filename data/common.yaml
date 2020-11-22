@@ -46,4 +46,20 @@ ecmf::profile::database::postgres::firewall::ports:             {}
 ecmf::profile::database::postgres::databases::list:             {}
 ecmf::profile::database::postgres::roles::list:                 {}
 ecmf::profile::database::postgres::grants::list:                {}
+#vscode settings
+ecmf::profile::vscode::gpg_key::microsoft_gpg_key_path: '/etc/apt/trusted.gpg.d/packages.microsoft.gpg'
+ecmf::profile::vscode::gpg_key::source: https://packages.microsoft.com/keys/microsoft.asc
+ecmf::profile::vscode::packages::list:
+  libnss3:
+    ensure: present
+  libxkbfile1:
+    ensure: present
+  libsecret-1-0:
+    ensure: present
+  libgtk-3-0:
+    ensure: present
+  libxss1:
+    ensure: present
+  libgbm1:
+    ensure: present
 ...
